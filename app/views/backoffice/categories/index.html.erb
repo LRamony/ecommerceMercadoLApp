@@ -3,14 +3,20 @@
         <div class="col-lg-12">
             <h1 class="page-header">Categorias</h1>
         </div>
+        
         <!-- /.col-lg-12 -->
         <div class="col-lg-12">
-                    <div class="panel panel-default">
+                    <% if notice %>
+                        <div class="alert alert-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    <%= notice %> </font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                </font></font></div>
+                    <% end %>  
+                        <div class="panel panel-default">
                         <div class="panel-heading">
                             Categorias
                             <%= link_to new_backoffice_category_path,class: "btn btn-success btn-circle pull-right", style: "margin-top: -5px" do %>
                                 <i class="fa fa-plus"></i>
-                            <%end%>    
+                            <%end%>                                
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
