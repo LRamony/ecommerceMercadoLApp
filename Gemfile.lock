@@ -60,6 +60,8 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
+    bootsnap (1.5.1-java)
+      msgpack (~> 1.0)
     bootstrap (4.5.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
@@ -152,6 +154,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.10-x86-mingw32)
       mini_portile2 (~> 2.4.0)
+    notifyjs_rails (0.0.2)
     orm_adapter (0.5.0)
     popper_js (1.16.0)
     public_suffix (4.0.6)
@@ -283,6 +286,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4, < 0.6.0)
+  notifyjs_rails (~> 0.0.2)
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.4)
   rails-i18n

@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.8'
 
+# Notify.js is a jQuery plugin to provide simple yet fully customisable notifications.
+gem 'notifyjs_rails', '~> 0.0.2'
 # BootStrap 4.5.3
 gem 'bootstrap', '~> 4.5', '>= 4.5.3'
 gem 'jquery-rails'

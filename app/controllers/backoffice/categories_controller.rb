@@ -30,7 +30,13 @@ class Backoffice::CategoriesController < BackofficeController
     end    
   end  
 
-  def delete 
+  def destroy 
+    c = set_category.description
+    if set_category.destroy
+      redirect_to backoffice_categories_path, notice: ("Categoria '#{c}' excluida com sucesso!!!")
+    else
+      render :new
+    end    
   end   
 
   private
