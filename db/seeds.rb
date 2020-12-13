@@ -22,3 +22,7 @@ categories.each do |categoriess|
     Category.find_or_create_by!(description: categoriess )
 end    
 puts "CATEGORIAS casdastradas com Sucesso!!!"
+
+puts "CRIANDO Administrador!!!"
+    Admin.create!(email: "admin@gmail.com", password: "123456", password_confirmation: "123456")
+puts "Administrador casdastrado com Sucesso!!!"

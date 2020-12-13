@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :backoffice do
     #only: [:edit, :update, :show, :destory] <- so quero mostrar
     resources :categories, except: [:show] #<- so n quero mostrar
+    resources :admins, except: [:show, :destroy]
     get 'categories/index'
     get 'dashboard', to: 'dashboard#index'
   end
