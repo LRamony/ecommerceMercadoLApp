@@ -39,9 +39,9 @@ class Backoffice::AdminsController < BackofficeController
     end  
 
     def destroy 
-        c = set_category.description
+        #c = set_category.description
         if set_category.destroy
-            redirect_to backoffice_admins_path, notice: ("Admin '#{c}' excluida com sucesso!!!")
+            redirect_to "/backoffice/admins", notice: ("Admin excluidp com sucesso!!!")
         else
             render :new
         end    
