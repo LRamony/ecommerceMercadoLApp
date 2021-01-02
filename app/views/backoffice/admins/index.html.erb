@@ -28,7 +28,8 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Nome</th> 
-                                    <th>Email</th>     
+                                    <th>Email</th>    
+                                    <th>Tipo de Acesso</th>    
                                     <th></th>          
                                 </tr>
                             </thead>                                   
@@ -38,6 +39,7 @@
                                     <td><%=categorias.id%></td>
                                     <td><%=categorias.name%></td>
                                     <td><%=categorias.email%></td>
+                                    <td><%=categorias.role_br%></td>
                                     <td style: width= 150px;>
                                         <%= link_to edit_backoffice_admin_path(categorias.id), class: "btn btn-warning btn-circle" do %>
                                             <i class="fa fa-edit"></i>
@@ -47,7 +49,7 @@
                                                 <i class="fa fa-times"></i>
                                             <%end%>
                                         <%else%>   
-                                           <!-- <%= link_to "#", disabled: "disabled", class:"btn btn-danger btn-circle"  do%>
+                                            <!-- <%= link_to "#", disabled: "disabled", class:"btn btn-danger btn-circle"  do%>
                                                 <i class="fa fa-times"></i>
                                             <%end%> -->
                                         <%end%>                             
