@@ -11,11 +11,11 @@ class Backoffice::CategoriesController < BackofficeController
 
   def create 
     #@category = Category.new(params.require(:category).permit(:description))
-    @category = Category.new(params_category)
-    if @category.save 
+    @category = CategoryService.create(params_category)
+    unless @category.errors.any? #unless = a menos q tenha erro faça o q tem dentro d unless
       redirect_to backoffice_categories_path, notice: ("Categoria " + "#{@category.description}" + " salva com sucesso!!!")
     else
-      render :new
+      render :new #Se existir erro é pra executar esse codigo
     end    
   end 
   
