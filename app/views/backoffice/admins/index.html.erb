@@ -27,7 +27,8 @@
                             
                                 <tr>
                                     <th>#</th>
-                                    <th>Descrição</th>   
+                                    <th>Nome</th> 
+                                    <th>Email</th>     
                                     <th></th>          
                                 </tr>
                             </thead>                                   
@@ -35,6 +36,7 @@
                             <%@Categorias.each do |categorias|%>
                                 <tr>
                                     <td><%=categorias.id%></td>
+                                    <td><%=categorias.name%></td>
                                     <td><%=categorias.email%></td>
                                     <td style: width= 150px;>
                                         <%= link_to edit_backoffice_admin_path(categorias.id), class: "btn btn-warning btn-circle" do %>

@@ -28,6 +28,7 @@
                     <div class="col-lg-6">
                     <%= form_for([:backoffice, @category]) do |f|%>
                         <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descrição:</font></font></label>
+                                <%= f.text_field :name, class: "form-control", placeholder: "Digite o nome do Administrador"%> <br>
                                 <%= f.text_field :email, class: "form-control", placeholder: "Email do administrador"%> <br>
                                 <%= f.password_field :password, class: "form-control", placeholder: "Senhas"%><br>
                                 <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirmação de senhas"%><br>
