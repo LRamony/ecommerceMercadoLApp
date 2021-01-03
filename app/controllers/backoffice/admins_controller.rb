@@ -3,6 +3,7 @@ class Backoffice::AdminsController < BackofficeController
 
     def index
         @Categorias = Admin.all
+        #@Categorias = Admin.with_full_access #trazer apenas os admins com acesso full "Olhe o model admin"
     end
 
     def new
