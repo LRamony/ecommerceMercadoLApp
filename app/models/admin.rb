@@ -1,7 +1,14 @@
 class Admin < ApplicationRecord
-  enum role: {:full_access => 0, :restricted_access => 1}
 
-  #scope :with_full_access, -> { where(role: 'full_access') } #uso de lambda para criar scope
+  #Constantes
+  ROLES  = {:full_access => 0, :restricted_access => 1}
+
+  #Enums
+  enum role: ROLES 
+
+  #scope
+  # scope :with_full_access, -> { where(role: ROLES[:full_access] ) } #uso de lambda para criar scope
+  # scope :with_restricted_access, -> { where(role: ROLES[:restricted_access]) } #uso de lambda para criar scope
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
