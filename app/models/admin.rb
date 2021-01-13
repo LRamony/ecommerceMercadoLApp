@@ -1,5 +1,5 @@
 class Admin < ApplicationRecord
-  enum role: [:full_access, :restricted_access]
+  enum role: {:full_access => 0, :restricted_access => 1}
 
   #scope :with_full_access, -> { where(role: 'full_access') } #uso de lambda para criar scope
 
@@ -8,11 +8,11 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  def role_br
-    if self.role == "full_access"
-      'Acesso Completo'
-    else
-      'Acesso Restrito'
-    end
-  end         
+  # def role_br
+  #   if self.role == "full_access"
+  #     'Acesso Completo'
+  #   else
+  #     'Acesso Restrito'
+  #   end
+  # end         
 end

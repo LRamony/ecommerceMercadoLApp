@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.8'
 
+#Ajude o recurso ActiveRecord :: Enum a funcionar bem com I18n e simple_form.
+gem 'enum_help', '~> 0.0.17'
 # Notify.js is a jQuery plugin to provide simple yet fully customisable notifications.
 gem 'notifyjs_rails', '~> 0.0.2'
 # BootStrap 4.5.3
