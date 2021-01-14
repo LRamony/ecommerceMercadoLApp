@@ -14,7 +14,7 @@ class Backoffice::AdminsController < BackofficeController
         #@category = Category.new(params.require(:category).permit(:description))
         @category = Admin.new(params_category)
         if @category.save 
-            redirect_to backoffice_admins_path, notice: ("Admins " + "#{@category.email}" + " salva com sucesso!!!")
+            redirect_to backoffice_admins_path, notice: ("Admins " + "#{@category.email}" + %Q( salvo com sucesso!!!)) #%W < cria um array baseado nas palavras passadas
         else
             render :new
         end    
